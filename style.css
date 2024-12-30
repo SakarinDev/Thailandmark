@@ -1,0 +1,218 @@
+
+   body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+        .logo a {
+            text-decoration: none; /* ลบเส้นใต้ */
+          }
+          
+          .logo .bold-text {
+            color: black;
+            font-weight: bold;
+            vertical-align: middle; /* ทำให้ตัวหนังสือเลื่อนขึ้นเข้ากับ vertical-align ของ img */
+            padding-left: 15px; /* คง padding-left ไว้เช่นเดิม */
+          }
+          
+          .logo img {
+            vertical-align: middle; /* ทำให้รูปเลื่อนลงเข้ากับ vertical-align ของ text */
+          }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+        .header .logo {
+            display: flex;
+            align-items: center;
+        }
+        .header .logo img {
+            height: 40px;
+        }
+        .header .nav {
+            display: flex;
+            align-items: center;
+        }
+        .header .nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #000;
+            font-weight: 500;
+        }
+    
+        .header .search {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            padding: 5px 10px;
+        }
+        .header .search input {
+            border: none;
+            outline: none;
+            padding: 5px;
+        }
+        .header .search button {
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        .header .profile {
+            display: flex;
+            align-items: center;
+        }
+        .header .profile i {
+            margin: 0 10px;
+            cursor: pointer;
+        }
+        .content {
+            padding: 20px;
+        }
+        .filters {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .filters .filter-options {
+            display: flex;
+            align-items: center;
+        }
+        .filters .filter-options button {
+            background: none;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            padding: 5px 10px;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        .filters .filter-options button.active {
+            border: 1px solid #000;
+        }
+        .filters .toggle {
+            display: flex;
+            align-items: center;
+        }
+        .filters .toggle input {
+            margin-right: 5px;
+        }
+        .listings {
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+            flex-wrap: wrap;
+            row-gap: 50px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px; /* Space between cards */
+            padding: 20px; /* Optional padding around the grid */
+        }
+        .listing {
+            width: 23%;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s ease; /* เพิ่ม transition ให้กับทุก property */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transform: scale(1); /* ขนาดเริ่มต้นของ card */
+           
+        }
+        /* Card container layout */
+
+        .listing:hover{
+            transform: scale(1.05);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.3); /* เพิ่มเงาให้มากขึ้น */
+            background-color: #f8f9fa; /* เปลี่ยนสีพื้นหลัง */
+            /* border-color: red; เปลี่ยนสีขอบ */
+        }
+        .listing img {
+            width: 100%;
+            max-height: 100%;
+            border-radius: 10px;
+        }
+          /* image card slide */
+          
+            /* image card slide */
+        .listing .details {
+            padding: 10px;
+        }
+        .listing .details .title {
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        .listing .details .location {
+            color: #777;
+            margin-bottom: 5px;
+        }
+        .listing .details .date {
+            color: #777;
+            margin-bottom: 5px;
+        }
+        .listing .details .price {
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        .listing .details .rating {
+            display: flex;
+            align-items: center;
+        }
+        .listing .details .rating i {
+            color: #333;
+            margin-right: 5px;
+        }
+        /* clock icon */
+        @keyframes glow {
+
+            100% {
+              text-shadow: 0 0 10px red;
+            }
+          }
+          .fas.fa-clock {
+            animation: glow 3s linear infinite; /* ใช้ animation ที่ชื่อ glow กำหนดให้ทำซ้ำตลอดเวลา */
+           
+          
+          }
+          /* clock icon */
+          
+        /* Thailandmark bold text */
+.bold-text{
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/* footer */
+footer {
+    background-color: #d48608; /* Dark background for contrast */
+    color: white; /* Light text for readability */
+    padding: 20px 0; /* Padding for spacing */
+    text-align: center; /* Center-align text */
+    font-family: 'Arial', sans-serif; /* Use a clean font */
+    justify-content: center;
+    display: flex; /* ใช้ Flexbox เพื่อจัดการเนื้อหา */
+    
+}
+
+footer .footer-content {
+    display: flex; /* Use flex*/
+}
+footer ul {
+    list-style-type: none; /* ลบ bullet points จาก ul */
+    padding: 0; /* ลบ padding ที่มากับ ul เพื่อให้ขอบเข้าใกล้เนื้อหามากขึ้น */
+}
+footer ul li a {
+    text-decoration: none; /* ลบเส้น underline จากลิงก์ใน li */
+    color: white;
+}
+/* footer */
+/* Responsive Design for Two Cards Per Row on Mobile */
+@media only screen and (max-width: 768px) {
+    .listings {
+        grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+        gap: 15px; /* Smaller gap for mobile */
+    }
+}
